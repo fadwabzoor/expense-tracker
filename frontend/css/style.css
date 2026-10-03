@@ -1,0 +1,33 @@
+/* Small custom touches on top of Bootstrap */
+
+body {
+  background-color: #f7f7fb;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  opacity: 0.85;
+}
+
+/* Summary cards laid out with CSS Grid (Phase 3 requirement) */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns on desktop */
+  gap: 1rem;
+}
+
+/* On small screens, stack the cards in a single column instead of
+   squeezing 3 equal columns into a narrow phone width. */
+@media (max-width: 576px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
